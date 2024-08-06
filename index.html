@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEIN Order Cancellation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .order-info {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            font-size: 16px;
+            padding: 10px 20px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SHEIN Order Cancellation</h1>
+        <div class="order-info">
+            <p>Order #A12345</p>
+            <p>Your cherry-flavored lube for Arthur J is ready to ship.</p>
+            <p>Please confirm the delivery address to proceed with your order.</p>
+        </div>
+        <button class="button" id="cancelButton">Cancel Order</button>
+        <!-- Using a different audio source for moaning sound -->
+        <audio id="moanSound" src="https://www.fesliyanstudios.com/play-mp3/7190" preload="auto"></audio>
+    </div>
+    <script>
+        document.getElementById('cancelButton').onclick = function(event) {
+            event.preventDefault();
+            var moanSound = document.getElementById('moanSound');
+            moanSound.volume = 1.0; // Set volume to 100%
+
+            moanSound.play().then(() => {
+                alert('Order has been canceled.');
+            }).catch(function(error) {
+                console.error("Audio play error:", error);
+                alert('Order has been canceled, but the sound could not be played.');
+            });
+        };
+    </script>
+</body>
+</html>
